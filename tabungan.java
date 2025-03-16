@@ -1,4 +1,4 @@
-public class tabungan extends rekening {
+public class tabungan extends Rekening {
     double bungaTahunan;
 
 
@@ -9,57 +9,22 @@ public class tabungan extends rekening {
     public double getBungaTahunan() {
         return bungaTahunan;
     }
-    public void setBungaTahunan(double bungaTahunan) {
-        this.bungaTahunan = bungaTahunan;
-    }
+    
+    
 
     public void hitungbunga (int bulan){
         double bunga = (bungaTahunan/100 * saldo)*(bulan/12.0);
         bunga += bunga;
+        System.out.println("===============================================================");
         System.out.println("Bunga telah ditambahkan : Rp "+ bunga);
+        System.out.println("===============================================================");
     }
-    public void hitungBunga(int bulan) {
-        double bunga = (saldo* bungaTahunan / 100) * (bulan / 12.0);
-        setSaldo(saldo + bunga);
-        System.out.println("Bunga ditambahkan: Rp " + bunga);
-    }
+    
     public void tampilkanInfo() {
     super.tampilkanInfo();
+    System.out.println("===============================================================");
     System.out.println("Bunga Tahunan: " + bungaTahunan + "%");
+    System.out.println("===============================================================");
 }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// public void hitungBunga(int bulan) {
-//     double bunga = (saldo * bungaTahunan / 100) * (bulan / 12.0);
-//     saldo += bunga;
-//     System.out.println("Bunga ditambahkan: Rp " + bunga);
-// }
-
-// @Override
-// public void tampilkanInfo() {
-//     super.tampilkanInfo();
-//     System.out.println("Bunga Tahunan: " + bungaTahunan + "%");
-// }
-// }
